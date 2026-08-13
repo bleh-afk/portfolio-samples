@@ -10,8 +10,12 @@ local function linear(t)
 end
 
 -- Quad
-local function inQuad(t) return t * t end
-local function outQuad(t) return t * (2 - t) end
+local function inQuad(t)
+	return t * t
+end
+local function outQuad(t)
+	return t * (2 - t)
+end
 local function inOutQuad(t)
 	if t < 0.5 then
 		return 2 * t * t
@@ -20,7 +24,9 @@ local function inOutQuad(t)
 end
 
 -- Cubic
-local function inCubic(t) return t * t * t end
+local function inCubic(t)
+	return t * t * t
+end
 local function outCubic(t)
 	local u = t - 1
 	return u * u * u + 1
@@ -34,7 +40,9 @@ local function inOutCubic(t)
 end
 
 -- Quart
-local function inQuart(t) return t * t * t * t end
+local function inQuart(t)
+	return t * t * t * t
+end
 local function outQuart(t)
 	local u = t - 1
 	return 1 - u * u * u * u
@@ -48,7 +56,9 @@ local function inOutQuart(t)
 end
 
 -- Quint
-local function inQuint(t) return t * t * t * t * t end
+local function inQuint(t)
+	return t * t * t * t * t
+end
 local function outQuint(t)
 	local u = t - 1
 	return 1 + u * u * u * u * u
@@ -62,9 +72,15 @@ local function inOutQuint(t)
 end
 
 -- Sine
-local function inSine(t) return 1 - math.cos(t * PI / 2) end
-local function outSine(t) return math.sin(t * PI / 2) end
-local function inOutSine(t) return -(math.cos(PI * t) - 1) / 2 end
+local function inSine(t)
+	return 1 - math.cos(t * PI / 2)
+end
+local function outSine(t)
+	return math.sin(t * PI / 2)
+end
+local function inOutSine(t)
+	return -(math.cos(PI * t) - 1) / 2
+end
 
 -- Back
 local BACK_C1 = 1.70158
